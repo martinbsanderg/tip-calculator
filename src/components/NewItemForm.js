@@ -18,8 +18,6 @@ export const NewItemForm = ({ onSubmit }) => {
       onSubmit(name, price);
     }
 
- 
-
     setName('');
     setPrice(0);
   };

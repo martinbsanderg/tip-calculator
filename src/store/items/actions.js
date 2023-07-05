@@ -7,7 +7,8 @@ export const addNewItem = (name, price) => ({
   type: ITEM_ADDED,
   payload: {
     name,
-    price
+    price,
+    quantity: 1
   }
 });
 
