@@ -4,8 +4,6 @@ import { NewItemFormContainer } from '../containers/NewItemFormContainer';
 import { SummaryContainer } from '../containers/SummaryContainer';
 import { TipSelectContainer } from '../containers/TipSelectContainer';
 
-import { Summary } from './Summary';
-
 const Calculator = () => {
   return (
     <Card>

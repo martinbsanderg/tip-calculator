@@ -5,6 +5,11 @@ import {
   updatePrice,
   updateQuantity
 } from '../store/items/actions';
+import { selectItemTotal } from '../store/items/selectors';
+
+const mapStateToProps = (state, props) => ({
+  total: selectItemTotal(state, props)
+});
 
 const maptDispatchToProps = (dispatch, ownProps) => {
   return {
@@ -15,4 +20,7 @@ const maptDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-export const MenuItemContainer = connect(null, maptDispatchToProps)(MenuItem);
+export const MenuItemContainer = connect(
+  mapStateToProps,
+  maptDispatchToProps
+)(MenuItem);

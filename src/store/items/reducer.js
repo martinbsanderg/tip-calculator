@@ -23,7 +23,7 @@ export const reducer = (state = initialItems, action) => {
   if (action.type === ITEM_PRICE_UPDATED) {
     return state.map((item) => {
       if (item.uuid === action.payload.uuid) {
-        return { ...item, price: action.payload.price };
+        return { ...item, price: parseInt(action.payload.price) };
       }
       return item;
     });
@@ -31,7 +31,7 @@ export const reducer = (state = initialItems, action) => {
   if (action.type === ITEM_QUANTITY_UPDATED) {
     return state.map((item) => {
       if (item.uuid === action.payload.uuid) {
-        return { ...item, quantity: action.payload.quantity };
+        return { ...item, quantity: parseInt(action.payload.quantity) };
       }
       return item;
     });
